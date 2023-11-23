@@ -1,0 +1,17 @@
+#num_clusters = len(set(cluster_labels))
+#clusters = pd.Series([coordenadas[cluster_labels == n] for n in range(num_clusters)])
+#print('Number of clusters: {}'.format(num_clusters))
+
+
+dtype={'cep': float , 'latitude': float , 'longitude': float} ,
+
+#df[1] = df[1].astype(float)
+#df[2] = df[2].astype(float)
+#df[0] = pd.to_numeric(df[0], errors='coerce')
+#df[1] = pd.to_numeric(df[1], errors='coerce')
+#df[2] = pd.to_numeric(df[2], errors='coerce')
+
+#coordenadas = df.to_numpy()
+oordenadas = df[[1, 2]].to_numpy()
+df[1] = df[1].str.replace(',', '.').astype(float)
+df[2] = df[2].str.replace(',', '.').astype(float)
